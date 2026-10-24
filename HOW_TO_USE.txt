@@ -1,0 +1,45 @@
+HOW TO USE: brain-tasks
+=======================
+
+PURPOSE
+  Automatically extract and track every action item, deferred bug, TODO comment,
+  and verbal commitment from your current chat session and codebase into your
+  Second Brain without duplicating existing tasks.
+
+CAPABILITIES
+  - Scans recent code for TODO, FIXME, and HACK annotations
+  - Mines conversation history for promises, follow-ups, and pending tests
+  - Deduplicates against existing Second Brain `#task` memories
+  - Prioritizes findings into high/medium impact checklists
+  - Provides 1-click batch saving to your knowledge base
+
+USE CASES
+  - "What tasks did we say we'd do later during this chat?"
+  - Extracting open questions before concluding a feature sprint
+  - Reviewing all active tasks associated with a project
+
+IDEAS
+  - Run `/brain-tasks` before `/brain-checkpoint` to ensure all open loops are recorded
+  - Tag tasks with specific sub-components for fast retrieval later
+
+PROMPTS YOU CAN PASTE
+  /brain-tasks
+
+  /brain-tasks Live Actions Helper
+
+EXAMPLE FLOW
+  You:   /brain-tasks
+  Agent: [Scans codebase and transcript, compares with Second Brain tasks]
+         📋 Brain Tasks Dashboard:
+         🔴 Urgent:
+           [ ] Add timeout handler for Ableton OSC handshake (mentioned turn 12)
+         🟡 Backlog:
+           [ ] Refactor settings.json parser to support custom port overrides
+         🟢 Already in Brain:
+           - Test WebView2 on multi-monitor setup (mem_91b82c)
+         Ready to save new tasks? (Reply 'save all' or pick numbers)
+
+DEFAULT GOALS IF YOU DON'T NAME ONE
+  1. Extract TODOs from modified files and chat history
+  2. Filter against existing brain tasks to prevent duplicates
+  3. Output prioritized task table with ready-to-save commands
